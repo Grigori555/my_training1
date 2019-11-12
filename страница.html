@@ -1,0 +1,808 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset = "utf-8">
+        <title>Рассчет ипотеки</title>
+        <link href="main.css" rel="stylesheet">
+        <link rel="icon" href="favicon.ico">
+       
+    </head>
+    <body>
+        <table class ="table">
+            <tr class = "string1">
+                <th class="column01">Тип платежа:</th>
+                <th class="column01" align ="center">Значение,руб.</th>
+             </tr>
+             <tr class = "string4">
+                    <td class="column31"> 1.Сумма кредита,руб.</td>
+                    <td  id = "td1" class = "column41" >
+                        <form>
+                                 <input class="num_input" type="number" id = "num_1" placeholder="Сумма 300 т.-50 млн." title="введите сумму">
+                                <button class="delete" type="reset" title="очистить окно ввода" onclick="playSound1()">del</button>
+									<div id="error1"></div>
+									<div id="error2"></div>
+									<div id="error3"></div>
+									<div id="error4"></div>
+									<div id="error5"></div>
+									
+                                
+                        </form>
+                     
+
+                    
+
+                    </td>
+                    
+            </tr>
+            
+            <tr class = "string5">
+                    <td class="column32">2.На какой срок?, лет</td>
+                    <td  id = "td2" class = "column41">
+                        <form>
+                            <input class="num_input" type="number" id = "num_2" placeholder="От 1 года -30 лет" title="введите количество лет">
+                            <button class="delete" type="reset" title="очистить окно ввода" onclick="playSound1()">del</button>
+                            		<div id="error6"></div>
+									<div id="error7"></div>
+									<div id="error8"></div>
+									<div id="error9"></div>
+									<div id="error10"></div>
+                        </form>
+                    </td>
+
+            </tr>
+            <tr class = "string6">
+                    <td class="column32">3.Процентая ставка по кредиту в год</td>
+                    
+                    <td id = "td3" class = "column41">
+                            <form>
+                                <input class="num_input" type="number" id = "num_3" placeholder="От 1 -15 %" title="введите процент">
+                                <button class="delete" type="reset" title="очистить окно ввода" onclick="playSound1()">del</button>
+                                	<div id="error11"></div>
+									<div id="error12"></div>
+									<div id="error13"></div>
+									<div id="error14"></div>
+									<div id="error15"></div>
+                            </form>
+                    </td>
+            </tr>
+            
+            
+
+
+            <tr>
+                    <th id = "result" class="column01">Инструкция:</th>
+                    <th id="error" class="column01"></th>
+                </tr>
+            <tr class = "string2">
+                <td class="column11" id = "four">4. Введите значения в пункты с 1-3</td>
+                <td id="out1">empty</td>
+                </tr>
+            <tr class = "string3">
+                <td class="column21" id = "five" >5. Нажмите</td>
+                <td id="out2">empty</td>
+                </tr>
+                </tr>
+                
+
+                <tr class = "string19">
+                        <td class="hello" id = "six">6. кнопку</td>
+                        <td id="out3">empty</td>
+                        
+                        </tr>
+                <tr class = "string19">
+                    <td class="hi" id = "seven">7."Рассчитать"</td>
+                     <td id="out4">empty</td>
+                                
+                                </tr>
+                <tr>
+                        <td class = "calc" >
+                            <audio id="audio1" src="audio/button.wav" autoplay="false" ></audio>
+                                
+                                    <button id="calc_rezult" class = "num_calc" onclick="main_calc()" title="рассчет итоговых значений"> Рассчитать
+                                    </button>
+                                </a>
+
+                                    
+                                      
+                                    
+
+
+                                <div id="myModal" class="modal">
+                                    <div  class="modal_content" >
+                                        <span  class="close">
+                                             <audio id="audio3" src="audio/button.wav" autoplay="false" ></audio>
+                                        	<button id="ok">
+                                        		ОК
+                                        	</button>
+                                        </span>
+                                            <p  id = "main_error">
+
+                                            </p>
+                                            
+
+                                                <img id="picerror" src="error.jpg"> 
+                                                
+                                             
+                                    </div>
+                                </div>
+                                <audio id="audioer" src="audio/error.wav" autoplay="false"></audio>
+                            <div id="myModal1" class="modal1">
+                                    <div  class="modal_content1" >
+                                        <span  class="close1">
+                                            <audio id="audio4" src="audio/button.wav" autoplay="false" ></audio>
+                                                <button id="ok1">
+                                                    Результат
+                                                </button>
+
+                                        </span>
+                                        <audio id="audio5" src="audio/win.wav" autoplay="false" ></audio>        
+                                            
+                                            <p  id = "win"></p>  
+                                            <img id="happypict"      src="happiness.jpg">
+                                    </div>
+                                </div>
+                        
+
+
+                        </td>  
+                       
+                       <td class = "calc" id="grisha">
+                         <audio id="audio2" src="audio/button.wav" autoplay="false" ></audio>
+                           <button id = "clear" class = "num_calc" type="reset" > Очистить </button>
+                          
+                        </td>
+                                
+    
+                       
+                    
+                       
+                
+                </tr>
+                <tr>
+                    <th>
+                        
+                    </th>
+                </tr>
+                <tr>
+                    <th>
+                        
+                    </th>
+                </tr>
+
+                  
+                <tr>
+                    <th>
+                        
+                    </th>
+                </tr>
+
+               
+            
+                   
+
+        </table> 
+
+                                
+
+
+        <script type="text/javascript" src="jquery.js"></script>
+        <script type="text/javascript" src="script2.js"></script>
+        <script type="text/javascript">
+
+// conditions
+            
+             $(document).ready(function(){
+                        $("#calc_rezult").click(function(){
+                         $("#main_error").hide(); 
+                             
+                            var summ=$("#num_1").val();
+                            var time =$("#num_2").val();
+                            var persent =$("#num_3").val();
+                            var email =$("#email").val();
+                                
+                                var check="";
+                                var check1="";
+                                var check2="";
+                                var check3="";
+                                var span="";
+
+                                
+	                            if(summ ==="") {check="Вы ввели пустое значение в пункт 1, " +"</br>" + "нажмите кнопку \"Очистить\" и исправьте данные.";
+                                playerror();
+                                document.getElementById("out1").innerHTML = "";
+	                            document.getElementById("out2").innerHTML = "";
+	                            document.getElementById("out3").innerHTML = "";
+	                            document.getElementById("out4").innerHTML = "";
+                                document.body.style.backgroundColor = "violet";
+                                document.getElementById('four').style.color = "red";
+							    document.getElementById('five').style.color = "red";
+							    document.getElementById('six').style.color = "red";
+							    document.getElementById('seven').style.color = "red";
+
+                            // modal error open
+
+                                var modal = document.getElementById("myModal"); // window
+
+                                span = document.getElementsByClassName("close")[0]; // close
+                                     modal.style.display="block";
+                                span.onclick= function() { // close
+                                modal.style.display="none";
+                                playSound3();
+
+                                
+                                }
+                                window.onclick=function() { // click window - close
+                                if(event.target== modal) {
+                                 modal.style.display="none";
+                                    }
+                                }
+
+                                            // none window IMPORTANT
+                                            let modal1 = document.getElementById("myModal1"); // window
+                                            
+                                            let span1 = document.getElementsByClassName("close1")[0]; // close
+                                            modal1.style.display="none";
+
+                                                                                // congratulations
+                                                                    
+                                            document.getElementById('win').innerHTML = "Поздравляем, выполнено!";
+                                            document.getElementById('win').style.color = "green";
+                                            document.getElementById('win').style.fontWeight = "bolder";
+                                                                    
+                                            span1.onclick= function() { // close
+                                            modal1.style.display="none";
+                                            
+                                            }
+                                            window.onclick=function() { // click window - close
+                                            if(event.target== modal) {
+                                             modal1.style.display="none";
+                                                }
+                                                }
+                                     
+
+
+
+                                
+
+
+                                }
+
+
+
+                               
+
+
+                                
+                                
+
+
+
+	   							
+	                             else if(summ<300000) {check="Сумма меньше 300т.р.(п.1), " +"</br>" + "нажмите кнопку \"Очистить\" и исправьте данные.";
+                                 playerror();
+	                            document.getElementById("out1").innerHTML = "";
+	                            document.getElementById("out2").innerHTML = "";
+	                            document.getElementById("out3").innerHTML = "";
+	                            document.getElementById("out4").innerHTML = "";
+                                document.body.style.backgroundColor = "violet";
+                                document.getElementById('four').style.color = "red";
+							    document.getElementById('five').style.color = "red";
+							    document.getElementById('six').style.color = "red";
+							    document.getElementById('seven').style.color = "red";
+
+                                // modal error open
+
+                                var modal = document.getElementById("myModal"); // window
+
+                                span = document.getElementsByClassName("close")[0]; // close
+                                     modal.style.display="block";
+                                span.onclick= function() { // close
+                                modal.style.display="none";
+                                playSound3();
+                                }
+                                window.onclick=function() { // click window - close
+                                if(event.target== modal) {
+                                 modal.style.display="none";
+                                    }
+                                }
+
+
+                                            // none window IMPORTANT
+                                            let modal1 = document.getElementById("myModal1"); // window
+                                            
+                                            let span1 = document.getElementsByClassName("close1")[0]; // close
+                                            modal1.style.display="none";
+
+                                                                                // congratulations
+                                                                    
+                                            document.getElementById('win').innerHTML = "Поздравляем, выполнено!";
+                                            document.getElementById('win').style.color = "green";
+                                            document.getElementById('win').style.fontWeight = "bolder";
+                                                                    
+                                            span1.onclick= function() { // close
+                                            modal1.style.display="none";
+                                            
+                                            }
+                                            window.onclick=function() { // click window - close
+                                            if(event.target== modal) {
+                                             modal1.style.display="none";
+                                                }
+                                                }
+								}
+
+
+
+	   								
+	   							else if(summ>50000000) {check="Сумма больше 5 млн.руб, " +"</br>" + "нажмите кнопку \"Очистить\" и исправьте данные.";
+                                   playerror();
+	                            document.getElementById("out1").innerHTML = "";
+	                            document.getElementById("out2").innerHTML = "";
+	                            document.getElementById("out3").innerHTML = "";
+	                            document.getElementById("out4").innerHTML = "";
+                                document.body.style.backgroundColor = "violet";
+                                document.getElementById('four').style.color = "red";
+							    document.getElementById('five').style.color = "red";
+							    document.getElementById('six').style.color = "red";
+							    document.getElementById('seven').style.color = "red";
+                                // modal error open
+
+                                var modal = document.getElementById("myModal"); // window
+
+                                span = document.getElementsByClassName("close")[0]; // close
+                                     modal.style.display="block";
+                                span.onclick= function() { // close
+                                modal.style.display="none";
+                                playSound3();
+                                }
+                                window.onclick=function() { // click window - close
+                                if(event.target== modal) {
+                                 modal.style.display="none";
+                                    }
+                                }
+
+
+                                            // none window IMPORTANT
+                                            let modal1 = document.getElementById("myModal1"); // window
+                                            
+                                            let span1 = document.getElementsByClassName("close1")[0]; // close
+                                            modal1.style.display="none";
+
+                                                                                // congratulations
+                                                                    
+                                            document.getElementById('win').innerHTML = "Поздравляем, выполнено!";
+                                            document.getElementById('win').style.color = "green";
+                                            document.getElementById('win').style.fontWeight = "bolder";
+                                                                    
+                                            span1.onclick= function() { // close
+                                            modal1.style.display="none";
+                                            
+                                            }
+                                            window.onclick=function() { // click window - close
+                                            if(event.target== modal) {
+                                             modal1.style.display="none";
+                                                }
+                                                }
+								}
+
+                                
+
+
+	   								
+
+
+
+
+
+
+
+
+
+	   							
+	   							if(time ===""){check="Вы ввели пустое значение в пункт 2, " +"</br>" + "нажмите кнопку \"Очистить\" и исправьте данные.";
+                                   playerror();
+	                            document.getElementById("out1").innerHTML = "";
+	                            document.getElementById("out2").innerHTML = "";
+	                            document.getElementById("out3").innerHTML = "";
+	                            document.getElementById("out4").innerHTML = "";
+                                document.body.style.backgroundColor = "violet";
+                                document.getElementById('four').style.color = "red";
+							    document.getElementById('five').style.color = "red";
+							    document.getElementById('six').style.color = "red";
+							    document.getElementById('seven').style.color = "red";
+
+                                // modal error open
+
+                                var modal = document.getElementById("myModal"); // window
+
+                                span = document.getElementsByClassName("close")[0]; // close
+                                     modal.style.display="block";
+                                span.onclick= function() { // close
+                                modal.style.display="none";
+                                playSound3();
+                                }
+                                window.onclick=function() { // click window - close
+                                if(event.target== modal) {
+                                 modal.style.display="none";
+                                    }
+                                }
+
+                                            // none window IMPORTANT
+                                            let modal1 = document.getElementById("myModal1"); // window
+                                            
+                                            let span1 = document.getElementsByClassName("close1")[0]; // close
+                                            modal1.style.display="none";
+
+                                                                                // congratulations
+                                                                    
+                                            document.getElementById('win').innerHTML = "Поздравляем, выполнено!";
+                                            document.getElementById('win').style.color = "green";
+                                            document.getElementById('win').style.fontWeight = "bolder";
+                                                                    
+                                            span1.onclick= function() { // close
+                                            modal1.style.display="none";
+                                            
+                                            }
+                                            window.onclick=function() { // click window - close
+                                            if(event.target== modal) {
+                                             modal1.style.display="none";
+                                                }
+                                                }
+									}
+
+
+	                            else if(time>30) {
+                                    playerror();
+	                            	check1="Срок кредита больше 30 лет,"+"</br>" + "нажмите кнопку \"Очистить\" и исправьте данные.";
+	                            document.getElementById("out1").innerHTML = "";
+	                            document.getElementById("out2").innerHTML = "";
+	                            document.getElementById("out3").innerHTML = "";
+	                            document.getElementById("out4").innerHTML = "";
+                                document.body.style.backgroundColor = "violet";
+                                document.getElementById('four').style.color = "red";
+							    document.getElementById('five').style.color = "red";
+							    document.getElementById('six').style.color = "red";
+							    document.getElementById('seven').style.color = "red";
+
+                                // modal error open
+
+                                var modal = document.getElementById("myModal"); // window
+
+                                span = document.getElementsByClassName("close")[0]; // close
+                                     modal.style.display="block";
+                                span.onclick= function() { // close
+                                modal.style.display="none";
+                                playSound3();
+                                }
+                                window.onclick=function() { // click window - close
+                                if(event.target== modal) {
+                                 modal.style.display="none";
+                                    }
+                                }
+
+                                            // none window IMPORTANT
+                                            let modal1 = document.getElementById("myModal1"); // window
+                                            
+                                            let span1 = document.getElementsByClassName("close1")[0]; // close
+                                            modal1.style.display="none";
+
+                                                                                // congratulations
+                                                                    
+                                            document.getElementById('win').innerHTML = "Поздравляем, выполнено!";
+                                            document.getElementById('win').style.color = "green";
+                                            document.getElementById('win').style.fontWeight = "bolder";
+                                                                    
+                                            span1.onclick= function() { // close
+                                            modal1.style.display="none";
+                                            
+                                            }
+                                            window.onclick=function() { // click window - close
+                                            if(event.target== modal) {
+                                             modal1.style.display="none";
+                                                }
+                                                }
+	 						}
+
+		 						 else if(time<1) {
+                                    playerror();
+		                            	check1="Срок кредита меньше года,"+"</br>" + "нажмите кнопку \"Очистить\" и исправьте данные.";
+		                            document.getElementById("out1").innerHTML = "";
+		                            document.getElementById("out2").innerHTML = "";
+		                            document.getElementById("out3").innerHTML = "";
+		                            document.getElementById("out4").innerHTML = "";
+                                    document.body.style.backgroundColor = "violet";
+                                    document.getElementById('four').style.color = "red";
+								    document.getElementById('five').style.color = "red";
+								    document.getElementById('six').style.color = "red";
+								    document.getElementById('seven').style.color = "red";
+
+                                    // modal error open
+
+                                var modal = document.getElementById("myModal"); // window
+
+                                span = document.getElementsByClassName("close")[0]; // close
+                                     modal.style.display="block";
+                                span.onclick= function() { // close
+                                modal.style.display="none";
+                                playSound3();
+                                }
+                                window.onclick=function() { // click window - close
+                                if(event.target== modal) {
+                                 modal.style.display="none";
+                                    }
+                                }
+
+                                            // none window IMPORTANT
+                                            let modal1 = document.getElementById("myModal1"); // window
+                                            
+                                            let span1 = document.getElementsByClassName("close1")[0]; // close
+                                            modal1.style.display="none";
+
+                                                                                // congratulations
+                                                                    
+                                            document.getElementById('win').innerHTML = "Поздравляем, выполнено!";
+                                            document.getElementById('win').style.color = "green";
+                                            document.getElementById('win').style.fontWeight = "bolder";
+                                                                    
+                                            span1.onclick= function() { // close
+                                            modal1.style.display="none";
+                                            
+                                            }
+                                            window.onclick=function() { // click window - close
+                                            if(event.target== modal) {
+                                             modal1.style.display="none";
+                                                }
+                                                }
+		 						}
+		 						 
+
+
+
+
+
+
+
+
+
+								if(persent ===""){check="Вы ввели пустое значение в пункты 1-3, " +"</br>" + "нажмите кнопку \"Очистить\" и исправьте данные.";
+	                            playerror();
+	                            document.getElementById("out1").innerHTML = "";
+	                            document.getElementById("out2").innerHTML = "";
+	                            document.getElementById("out3").innerHTML = "";
+	                            document.getElementById("out4").innerHTML = "";
+                                document.body.style.backgroundColor = "violet";
+                                document.getElementById('four').style.color = "red";
+								document.getElementById('five').style.color = "red";
+								document.getElementById('six').style.color = "red";
+								document.getElementById('seven').style.color = "red"; 
+
+                                // modal error open
+
+                                var modal = document.getElementById("myModal"); // window
+
+                                span = document.getElementsByClassName("close")[0]; // close
+                                     modal.style.display="block";
+                                span.onclick= function() { // close
+                                modal.style.display="none";
+                                playSound3();
+                                }
+                                window.onclick=function() { // click window - close
+                                if(event.target== modal) {
+                                 modal.style.display="none";
+                                    }
+                                }  
+
+
+                                            // none window IMPORTANT
+                                            let modal1 = document.getElementById("myModal1"); // window
+                                            
+                                            let span1 = document.getElementsByClassName("close1")[0]; // close
+                                            modal1.style.display="none";
+
+                                                                                // congratulations
+                                                                    
+                                            document.getElementById('win').innerHTML = "Поздравляем, выполнено!";
+                                            document.getElementById('win').style.color = "green";
+                                            document.getElementById('win').style.fontWeight = "bolder";
+                                                                    
+                                            span1.onclick= function() { // close
+                                            modal1.style.display="none";
+                                            }
+                                            window.onclick=function() { // click window - close
+                                            if(event.target== modal) {
+                                             modal1.style.display="none";
+                                                }
+                                                } 
+
+									}
+
+		 						else if(persent<1) {check2="Ставка по кредиту не может быть меньше 1%, пункт 3,"+"</br>" + "нажмите кнопку \"Очистить\" и исправьте данные.";
+                                 playerror();
+                                    document.getElementById("out1").innerHTML = "";
+		                            document.getElementById("out2").innerHTML = "";
+		                            document.getElementById("out3").innerHTML = "";
+		                            document.getElementById("out4").innerHTML = "";
+                                    document.body.style.backgroundColor = "violet";
+                                    document.getElementById('four').style.color = "red";
+								    document.getElementById('five').style.color = "red";
+								    document.getElementById('six').style.color = "red";
+								    document.getElementById('seven').style.color = "red";
+
+                                    // modal error open
+
+                                var modal = document.getElementById("myModal"); // window
+
+                                span = document.getElementsByClassName("close")[0]; // close
+                                     modal.style.display="block";
+                                span.onclick= function() { // close
+                                modal.style.display="none";
+                                playSound3();
+                                }
+                                window.onclick=function() { // click window - close
+                                if(event.target== modal) {
+                                 modal.style.display="none";
+                                    }
+                                }
+
+
+                                            // none window IMPORTANT
+                                            let modal1 = document.getElementById("myModal1"); // window
+                                            
+                                            let span1 = document.getElementsByClassName("close1")[0]; // close
+                                            modal1.style.display="none";
+
+                                                                                // congratulations
+                                                                    
+                                            document.getElementById('win').innerHTML = "Поздравляем, выполнено!";
+                                            document.getElementById('win').style.color = "green";
+                                            document.getElementById('win').style.fontWeight = "bolder";
+                                                                    
+                                            span1.onclick= function() { // close
+                                            modal1.style.display="none";
+                                            }
+                                            window.onclick=function() { // click window - close
+                                            if(event.target== modal) {
+                                             modal1.style.display="none";
+                                                }
+                                                }
+
+									}
+								else if(persent>15) {check2="Законодательством запрещены ставки больше 15%, пункт 3,"+"</br>" + "нажмите кнопку \"Очистить\" и исправьте данные.";
+                                playerror(); 
+                                    document.getElementById("out1").innerHTML = "";
+		                            document.getElementById("out2").innerHTML = "";
+		                            document.getElementById("out3").innerHTML = "";
+		                            document.getElementById("out4").innerHTML = "";
+                                    document.body.style.backgroundColor = "violet";
+                                    document.getElementById('four').style.color = "red";
+								    document.getElementById('five').style.color = "red";
+								    document.getElementById('six').style.color = "red";
+								    document.getElementById('seven').style.color = "red";
+
+
+                                    // modal error open
+
+                                var modal = document.getElementById("myModal"); // window
+
+                                span = document.getElementsByClassName("close")[0]; // close
+                                     modal.style.display="block";
+                                span.onclick= function() { // close
+                                modal.style.display="none";
+                                playSound3();
+                                }
+                                window.onclick=function() { // click window - close
+                                if(event.target== modal) {
+                                 modal.style.display="none";
+                                    }
+                                }
+
+
+                                            // none window IMPORTANT
+                                            let modal1 = document.getElementById("myModal1"); // window
+                                            
+                                            let span1 = document.getElementsByClassName("close1")[0]; // close
+                                            modal1.style.display="none";
+
+                                                                                // congratulations
+                                                                    
+                                            document.getElementById('win').innerHTML = "Поздравляем, выполнено!";
+                                            document.getElementById('win').style.color = "green";
+                                            document.getElementById('win').style.fontWeight = "bolder";
+                                                                    
+                                            span1.onclick= function() { // close
+                                            modal1.style.display="none";
+                                            }
+                                            window.onclick=function() { // click window - close
+                                            if(event.target== modal) {
+                                             modal1.style.display="none";
+                                                }
+                                                }
+
+                                    }
+                                    
+                                    else{
+                                        win1();
+                                    }
+// modal  open
+                           
+
+
+	                           
+
+
+                                if(check !="") {
+                                    $("#main_error").html(check);
+                                    $("#main_error").show();
+                                    return false;
+                                    }
+                                 else if (check1 !="") {
+                                    $("#main_error1").html(check1);
+                                    $("#main_error1").show();
+                                    return false;
+                                    }
+                                   else if (check2 !="") {
+                                    $("#main_error2").html(check2);
+                                    $("#main_error2").show();
+                                    return false;
+                                    }
+                                   
+                                   
+                                
+                               
+                            
+                        });
+                });
+
+  // error sound
+      
+  function playerror() {
+          let sound = document.getElementById("audioer");
+          sound.play();
+      }
+
+ //  clone win
+ function win1() {
+          var sound = document.getElementById("audio5");
+          sound.play();
+ }
+
+
+
+
+
+
+
+
+// send mail
+
+      /*  $(document).ready(function(){
+                        $("#send_email").click(function(){
+
+                        var check_email = "";
+                            else if (email.split("@").length-1 ==0 || email.split(".").length-1 ==0) 
+                            {
+                          check_email ="Вы ввели неккорректный email";
+                          }
+
+
+
+});
+                   
+                    });
+*/
+        </script>
+
+        
+         
+
+
+
+
+        
+   
+
+
+
+
+        
+            </body>
+</html>

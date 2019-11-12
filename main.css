@@ -1,0 +1,394 @@
+P { 
+    text-align: justify; /* Выравнивание по ширине */
+    color: green; /* Зеленый цвет текста */
+   }
+
+body{
+    background-image:url("curtains.jpg");
+    background-repeat:no-repeat;
+    background-size:100% 120%;
+
+}
+
+table {
+
+font-family: sans-serif;
+text-align: left;  
+border-collapse: separate;
+border-spacing: 5px;
+background-image:url("picture.jpg");
+color:#4A80FF;
+border:10px solid #77FFFF;
+border-radius: 15px;
+margin: auto;
+width: 700px;
+height:230px;
+box-shadow: 0 0 50px rgba(0,0,0,0.5); /* Параметры тени */
+
+
+}
+th{
+    font-size: 15px;
+    padding: 10px;
+    color:black;
+}
+
+td{
+    background:#00FFA9;
+    padding: 10px;
+    border-radius: 15px;
+    opacity: 0.9;
+
+
+
+
+}
+
+#out1, #out2, #out3,#out4{
+    text-align: center;
+    
+    }
+
+#calc_number{
+    text-align: center;
+    width: 150px;
+    height: 30px;
+}
+.calc {
+    text-align: center;
+}
+#calc_number2{
+    text-align: center;
+    width: 150px;
+    height: 30px; 
+}
+
+#calc_number3{
+    text-align: center;
+    width: 150px;
+    height: 35px; 
+}
+
+
+
+
+}
+
+
+
+.num_input{
+    position: relative;
+    right:15px;
+
+    
+}
+
+
+.num_calc{
+    background-color:white;
+    color:#A830E9;
+    border: 4px solid #D0FF00;
+    text-align: center;
+    width: 85px;
+    height: 25px; 
+    border-radius: 5px;
+}
+
+
+
+
+
+.num_calc1{
+    background-color:white;
+    color:#A830E9;
+    border: 4px solid #D0FF00;
+    text-align: center;
+    width: 85px;
+    height: 45px; 
+    border-radius: 5px;
+}
+
+#download{
+    background-color:white;
+    color:#A830E9;
+    border: 4px solid #D0FF00;
+    text-align: center;
+    width: 85px;
+    height: 45px; 
+    border-radius: 5px;
+    position: relative;
+    right:55px;
+
+}
+
+#send_email{
+    background-color:white;
+    color:#A830E9;
+    border: 4px solid #D0FF00;
+    text-align: center;
+    width: 85px;
+    height: 45px; 
+    border-radius: 5px;
+    position: relative;
+    left:55px;
+    
+
+}
+
+.delete{
+    background-color:white;
+    color:#4000FF;
+    border: 2px solid #FF00AE;
+    text-align: center;
+    width: 35px;
+    height: 25px; 
+    border-radius: 5px;
+    position: relative;
+    left:55px;
+}
+
+.delete:hover{
+    background-color: rgb(255, 0, 21); 
+    color: #000000;
+    border-radius: 20px;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+
+}
+.num_calc1:hover{
+    background-color: #8B8B8B; 
+    color: black;
+    border-radius: 20px;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+.num_calc:hover {
+    background-color: #00FFFF; 
+    color: #000000;
+    border-radius: 20px;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.delete:active{
+    color:silver;
+    background-color:  red; 
+
+}
+
+.num_calc:active{
+    color:white;
+    background-color:  green; 
+}
+
+.num_calc1:active{
+    color:rgb(255, 255, 255);
+    background-color:  green; 
+}
+#download:hover{
+    background-color: #8B8B8B; 
+    color: black;
+    border-radius: 20px;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);  
+
+}
+
+#download:active{
+    color:rgb(255, 255, 255);
+    background-color:  green; 
+}
+
+
+
+#send_email:hover{
+    background-color: #8B8B8B; 
+    color: black;
+    border-radius: 20px;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);  
+}
+
+
+#send_email:active{
+    color:rgb(255, 255, 255);
+    background-color:  green; 
+}
+
+
+
+ #main_error, #main_error1, #error3,
+ #main_error2, #error1,#error2,
+ #error4,#error5,#error6,
+ #error7,#error8,#error9,
+ #error10,#error11, #error12,
+ #error13,#error14,#error15 {
+    color:red;
+    font-weight:bold;
+    font-size:12pt;
+    float:left;
+    width:100%;
+    text-align:center;
+
+}
+
+
+
+.modal{
+    display: none;
+    position: fixed;
+    
+    z-index: 1;
+    left:0;
+    top:0;
+   
+    width: 100%;
+    height:100%;
+    overflow: auto;
+    opacity: 1;
+}
+
+.modal_content {
+    
+    background-color:grey;
+    margin: 15% auto;
+    padding: 20px;
+    border:5px solid blue;
+    width: 370px;
+    height:370px;
+    border-radius: 15px;
+    opacity: 1;
+    bottom: 20px;
+    position: absolute;
+    
+    left:450px;
+    box-shadow: 0 0 50px rgba(0,0,0,0.5); /* Параметры тени */
+
+}
+
+.close{
+    float:center;
+    color:blue;
+    font-size:28px;
+    font-weight: bold;
+    opacity: 1;
+    
+
+
+
+}
+
+#ok{
+font-family: Arial, serif;
+font-size:12pt;
+font-weight:bolder;
+ position: relative;
+top:220px;
+bottom:0px;
+left:35px;
+right: 500px;
+width: 90px;
+opacity: 1;
+
+
+}
+
+#ok:active{
+    
+    background-color:  black; 
+    color:white;
+
+}
+
+#picerror{
+position: relative;
+width: 90px;
+height:80px;
+top:180px;
+right: 55px;
+opacity: 1;
+}
+
+#happypict{
+position: relative;
+width: 180px;
+height:160px;
+top:95px;
+right: 0px;
+opacity: 1;
+
+
+}
+
+
+
+
+.modal1{
+    display: none;
+    position: fixed;
+    
+    z-index: 1;
+    left:0;
+    top:0;
+    width: 100%;
+    height:100%;
+    overflow: auto;
+    opacity: 1;
+
+}
+
+.modal_content1 {
+    background-image: url("sky.jpg");
+    margin: 15% auto;
+    padding: 20px;
+    border:5px solid blue;
+    width: 400px;
+    height:350px;
+    border-radius: 15px;
+    opacity: 1;
+    bottom: 20px;
+    position: absolute;
+    right: 550px;
+    
+    box-shadow: 0 0 50px rgba(0,0,0,0.5); /* Параметры тени */
+
+}
+
+.close1{
+    float:center;
+    color:blue;
+    font-size:28px;
+    font-weight: bold;
+    opacity: 1;
+    
+
+
+
+}
+
+#ok1{
+font-family: Arial, serif;
+font-size:12pt;
+font-weight:bolder;
+ position: relative;
+top:120px;
+bottom:0px;
+left:0px;
+right: 500px;
+width: 110px;
+opacity: 1;
+
+
+}
+
+#ok1:active{
+    
+    background-color:  black; 
+    color:white;
+    opacity: 1;
+
+}
+
+#win{
+    text-align: center;
+}
+
+ #free1, #free2, #free3, #send_email, #grisha, #papy, .pidoras{
+    opacity: 1;
+
+}
